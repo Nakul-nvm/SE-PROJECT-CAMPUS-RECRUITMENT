@@ -19,7 +19,7 @@ This project is a prototype and was developed mainly for academic purposes. Cont
 This project was developed as a group project for the Software Engineering course. Team members:
 
 - Nakul Kumar - [@Nakul-nvm](https://github.com/Nakul-nvm)
-- Lovenew Yadav 
+- Lovenew Yadav - [@lovenew232](https://github.com/lovenew232)
 - Naman Singla - [@NamanSingla007](https://github.com/NamanSingla007)
 - Manik Kashyap - [@MK3050](https://github.com/MK3050)
 
