@@ -20,7 +20,7 @@ This project was developed as a group project for the Software Engineering cours
 
 - Nakul Kumar - [@Nakul-nvm](https://github.com/Nakul-nvm)
 - Lovenew Yadav 
-- Naman Singla 
+- Naman Singla - [@NamanSingla007](https://github.com/NamanSingla007)
 - Manik Kashyap - [@MK3050](https://github.com/MK3050)
 
 
