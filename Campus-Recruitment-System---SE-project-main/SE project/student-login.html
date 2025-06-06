@@ -1,0 +1,142 @@
+<html>
+
+<head>
+    <title>
+        Student Login
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="studentlogin.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img alt="Illustration of a person sitting on a chair with a laptop" height="300" src="rb_4890.png"
+                width="300" />
+            <h2>
+                Student Login
+            </h2>
+            <button class="member-btn">
+                member
+            </button>
+        </div>
+        <div class="right">
+            <span class="close-btn">
+                x
+            </span>
+            <h2>
+                Campus Login
+            </h2>
+            <form>
+                <div class="input-group">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input id="email" placeholder="email@service.com" type="email" />
+
+                </div>
+                <div class="input-group">
+                    <label for="password">
+                        Password
+                    </label>
+                    <input id="password" placeholder="Password" type="password" />
+
+                </div>
+                <div class="remember-me">
+                    <input id="remember-me" type="checkbox" />
+                    <label for="remember-me">
+                        Remember Me
+                    </label>
+                    <a class="forgot-password" href="#">
+                        Forgot Password?
+                    </a>
+                </div>
+                <button class="google-btn" type="button">
+                    <img alt="Google logo" height="20" src="Google__G__logo.svg.png" width="20" />
+                    Login with Google
+                </button>
+                <button class="login-btn" type="submit">
+                    Login
+                </button>
+            </form>
+            <div class="signup">
+                Don't have an account?
+                <a href="#">
+                    Sign Up
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for Forgot Password -->
+    <div class="modal" id="forgotPasswordModal">
+        <div class="modal-content">
+            <h2>Forgot Password</h2>
+            <label for="forgot-email">Enter your email address:</label>
+            <input type="email" id="forgot-email" placeholder="email@example.com" required />
+            <button id="send-request-btn">Send Request</button>
+
+        </div>
+    </div>
+    <script>
+        const forgotPasswordModal = document.getElementById('forgotPasswordModal');
+        const forgotPasswordLink = document.querySelector('.forgot-password');
+        const closeModal = document.getElementById('close-modal');
+        const sendRequestBtn = document.getElementById('send-request-btn');
+
+        // Open modal when "Forgot Password?" is clicked
+        forgotPasswordLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default anchor click behavior
+            forgotPasswordModal.style.display = 'block'; // Show the modal
+        });
+
+        // Close modal when "X" is clicked
+        closeModal.addEventListener('click', () => {
+            forgotPasswordModal.style.display = 'none'; // Hide the modal
+        });
+
+        // Close modal when clicking outside of the modal content
+        window.addEventListener('click', (event) => {
+            if (event.target === forgotPasswordModal) {
+                forgotPasswordModal.style.display = 'none';
+            }
+        });
+
+        // Send request button functionality
+        sendRequestBtn.addEventListener('click', () => {
+            const email = document.getElementById('forgot-email').value;
+            if (email) {
+                alert(`Password reset request sent to ${email}`);
+                forgotPasswordModal.style.display = 'none'; // Hide the modal after sending request
+            } else {
+                alert('Please enter your email address.');
+            }
+        });
+        // Get the modal
+        var modal = document.getElementById("forgotPasswordModal");
+
+        // Get the button that opens the modal (you can replace this with your actual button)
+        var btn = document.getElementById("myBtn"); // Replace with your button ID
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Close the modal when the close button is clicked
+        var closeButton = document.getElementsByClassName("close-button")[0];
+        closeButton.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
